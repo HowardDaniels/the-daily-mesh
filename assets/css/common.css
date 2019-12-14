@@ -1,0 +1,26 @@
+.nav-text-1{
+    color: orange;
+}
+
+.nav-text-2{
+    color: white;
+}
+
+.navbar_navbar-expand-lg_navbar-light_bg-dark{
+    background-color: black;
+}
+
+.col-md-3{
+    background-color: #343a40;
+    color: white;
+    border: 1px bold orange;
+    height: 200px;
+    margin: 10px;
+}
+.containertitle{
+    color: orange;
+}
+
+hr{
+    border: 1px solid orange;
+}
