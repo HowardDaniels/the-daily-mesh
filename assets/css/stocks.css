@@ -1,0 +1,79 @@
+.nav-text-1{
+    color: orange;
+}
+
+.nav-text-2{
+    color: white;
+}
+
+.navbar_navbar-expand-lg_navbar-light_bg-dark{
+    background-color: black;
+}
+#body{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+.col-md-3{
+    background-color: #343a40;
+    color: white;
+    border: 1px bold orange;
+    height: 200px;
+    margin: 10px;
+}
+.containertitle{
+    color: orange;
+}
+
+hr{
+    border: 1px solid orange;
+}
+
+#footer{
+    background-color: #666666;
+    position: absolute;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    border-top: 8px solid orange;
+    color: white;
+}
+
+.container{
+    margin-top: 15px;
+    width: 900px;
+    
+}
+
+.card{
+    float: left;
+    margin: 30px;
+    top: 40px;
+}
+
+
+
+.card2{
+    float:right;
+    margin: 30px;
+    top: 40px;
+    height: 50px;
+    position: relative;
+}
+
+
+.row{
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 50px;
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
