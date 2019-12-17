@@ -42,3 +42,16 @@ hr{
     border-top: 8px solid orange;
     color: white;
 }
+
+@media screen and (max-width: 600px) {
+    #body {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    #footer{
+        position: sticky;
+    }
+  }
