@@ -73,8 +73,7 @@ hr{
 
 
 .row{
-    margin-bottom: 20px;
-    position: relative;
+ 
     bottom: 50px;
     overflow: auto;
 }
@@ -84,7 +83,7 @@ hr{
 }
 
 .stocks{
-    position: relative;
+   
     top: -40px;
 }
 
