@@ -1,18 +1,22 @@
 .nav-text-1{
     color: orange;
+    font-size: 16px;
 }
 
 .nav-text-2{
     color: white;
+    font-size: 16px;
 }
 
 .navbar_navbar-expand-lg_navbar-light_bg-dark{
     background-color: black;
+    font-size: 16px;
 }
-#body{
-    margin-left: 100px;
-    margin-right: 100px;
+.navbar-nav{
+    font-size: 16px;
 }
+
+
 
 
 .col-md-3{
@@ -43,14 +47,18 @@ hr{
 
 .container{
     margin-top: 15px;
-    width: 900px;
+    width: 60%;
     
+}
+
+.search{
+   bottom: 30px;
 }
 
 .card{
     float: left;
     margin: 30px;
-    top: 40px;
+   
 }
 
 
@@ -60,20 +68,28 @@ hr{
     margin: 30px;
     top: 40px;
     height: 50px;
-    position: relative;
+    
 }
 
 
 .row{
-    margin-bottom: 20px;
-    position: relative;
+ 
     bottom: 50px;
     overflow: auto;
 }
+
+.jumbotron{
+    height: 450px;
+}
+
+.stocks{
+   
+    top: -40px;
+}
+
 
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
-  }
-
+  };

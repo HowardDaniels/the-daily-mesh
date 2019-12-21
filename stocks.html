@@ -41,7 +41,7 @@
             </div>
           </div>
           <div class="card2" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">News Stories</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -56,27 +56,49 @@
               <a href="#" class="card-link">Another link</a>
             </div>
           </div>
+         
           
           <div class="container">
             
           <div class="jumbotron">
             <center><div class="ui search">
               <div class="ui icon input">
-                <input class="prompt" type="text" placeholder="Search for stock here">
-                <i class="search icon"></i>
+                <input id="prompt" type="text" placeholder="Search for stock here">
+                <i class="search icon" id="searchIcon"></i>
               </div>
               <div class="results"></div>
             </div>
             </center>
-            <h1 class="display-4">Stock</h1>
+            <div class="stocks"><h1 class="display-4">Stock</h1><h1 id="#stockname"></h1>
             <p class="lead">This is where the stock will display.</p>
             <hr class="my-4">
             <p>The important info plus the graph will be here</p>
             <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
           </div>
           
+          </div>
+          
         </div>
+        
         <div class="row">
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
           <div class="col-sm-3">
             <div class="card">
               <div class="card-body">
@@ -108,5 +130,6 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="assets/javascript/common.js"></script>
+        <script src="assets/javascript/stocks.js"></script>
     </body>
 </html>
