@@ -1,3 +1,4 @@
+var location = localStorage.getItem("location");
 
       var queryURL = "https://api.worldtradingdata.com/api/v1/stock?symbol=" + "AMZN" + "&api_token=if5qo5SkSbR7QWK2jE4QlqXXFzkkiM47AVu0nQQfDQLswL1k3d55gHhjZFej";
       $.ajax({
@@ -76,12 +77,12 @@
   function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude +
     "<br>Longitude: " + position.coords.longitude;
-console.log(x.innerHTML);
+    localStorage.setItem("location", x.innerHTML);
   }
 
   navigator.geolocation.getCurrentPosition(showPosition);
 
-  console.log(x.innerHTML);
+  console.log(location);
  var weatherqueryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=166a433c57516f51dfab1f7edaed8413&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
 
 $.ajax({
