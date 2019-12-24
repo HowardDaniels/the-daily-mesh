@@ -63,7 +63,7 @@
         }
   });
 
-  var x = document.getElementById("weather");
+  var x = document.getElementById("coordinates");
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -94,5 +94,9 @@ $.ajax({
 
 .then(function(response) {
   console.log(response);
+  $("#name").text(response.name);
+  $("#temp").text("Temp: " + Math.round(response.main.temp - 273.15) + " " + "\xB0" + "C/" + Math.round(((response.main.temp - 273.15)* 9/5) + 32) + " " + "\xB0" + "F");
+  $("#humidity").text("Humidity: " + response.main.humidity + "%");
+  $("#icon").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
 });
   }
