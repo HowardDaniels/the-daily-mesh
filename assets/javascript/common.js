@@ -98,5 +98,22 @@ $.ajax({
   $("#temp").text("Temp: " + Math.round(response.main.temp - 273.15) + " " + "\xB0" + "C/" + Math.round(((response.main.temp - 273.15)* 9/5) + 32) + " " + "\xB0" + "F");
   $("#humidity").text("Humidity: " + response.main.humidity + "%");
   $("#icon").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
+
+  
+
+  var query = response.name;
+  console.log(query);
+  var queryURLNYT = "https://api.nytimes.com/svc/semantic/v2/geocodes?query.json?latitude=13&longitude=25&api-key=jAuCXwxL8UcAQW1J1XytTNdLZek3b73p";
+  
+  $.ajax({
+    url: queryURLNYT,
+    method: "GET"
+  })
+  
+  .then(function(response) {
+    console.log(response);
+    
+  });
+
 });
   }
