@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/news.css">
+        <script src="assets/javascript/p5.js"></script>
+        <script src="assets/javascript/p5.dom.js"></script>
+        <script src="assets/javascript/p5.sound.js"></script>
+    
+      </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand" href="#"><div class="nav-text-1">The Daily Mesh</div></a>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"><div class="nav-text-2">Home</div><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><div class="nav-text-2">News</div></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><div class="nav-text-2">Weather</div></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><div class="nav-text-2">Stocks</div></a>
+                  </li>
+              </ul>
+            </div>
+          
+          </nav>
+          
+            <div class="formbar row">
+              <form  id="searchForm">
+                  <select class="w3-select selectionMethod" name="searchBy">
+                      <option value="q" selected>searchBy</option>
+                      <option value="q">Topic</option>
+                      <option value="sources">Source Name</option>
+                      <option value="domains">domain Address</option>
+                      <!-- <option value="language">language</option> -->
+                    </select>
+                <input id="searchWord" type="text" placeholder="search for">
+                <lable id="dateStartLable">Published from:</lable>
+               <input id="publicationDateSearchStart" type="date">
+               <lable id="dateStartLable">to:</lable>
+               <input id="publicationDateSearchEnd" type="date">
+                <!-- <input id="sourceSearch" placeholder=" source">
+                <input id="domainSearch" type="text" placeholder=" Source Domain"> -->
+                <select class="w3-select sortBySelection" name="sort  by">
+                    <option value="popularity" selected>Sort Results By</option>
+                    <option value="popularity">popularity</option>
+                    <option value="relevancy">relevancy</option>
+                    <option value="publishedAt">Date Published</option>
+                  </select>
+                
+                <input id="searchSubmit" type="submit"value="search">
+                <!-- <button id="advancedSearch"><p id="advancedP">avdanced search</p></button> -->
+
+            </form></div>
+            
+              
+            
+
+            
+        
+        
+
+          <div>
+          <div class="newsReel row">
+              <div class="col-md-3 newsBox" value="0">
+                    
+                    <div class="row articleTitle">articleTitle</div>
+                    <div class="row sourceTitle">scource</div>
+                    <hr class="line">
+                    <div class="row newsImage">
+                      </div>
+              </div>
+               <div class="col-md-3 newsBox" value="1">
+                    <div class="row articleTitle">articleTitle</div>
+                    <div class="row sourceTitle">scource</div>
+                    <hr class=" line">
+                    <div class="row newsImage"></div>
+
+              </div>
+              <div class="col-md-3 newsBox" value="2">
+                <div class="row articleTitle">articleTitle</div>
+                <div class="row sourceTitle">scource</div>
+                <hr class="line">
+                <div class="row newsImage"></div>
+
+              </div>
+              <div class="col-md-3 newsBox" value="3">
+                <div class=" row articleTitle">articleTitle</div>
+                <div class="row sourceTitle">scource</div>
+                <hr class="line">
+                <div class="row newsImage"></div>
+
+               </div>
+              </div>
+          <div class="scrollButton backwardsButton">PRE</div>
+          <div class="scrollButton forwardButton">NEXT</div> 
+        </div>
+        <div class="row articleContainer">
+          <div class="col-md-12 mainArticleTitle">ArticleTitle</div>
+          <div class="col-md-12 authorName">author name</div>
+          <div class="col-sm-12 underLine"></div>
+          <div class="col-md-12 articleText">
+            .........................................................................................
+          </div>
+
+
+
+
+        </div>
+        
+
+          
+
+          <footer id="footer">Copyright info goes here</footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/javascript/news.js"></script>
+        
+    </body>
+</html>

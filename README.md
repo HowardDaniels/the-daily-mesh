@@ -28,10 +28,11 @@ stocks:
 
     
 weather:
+    .for header - fiveday forecast
     .location{search}
      .5day forcast
       .graph
-      .
+      
 
 
 
