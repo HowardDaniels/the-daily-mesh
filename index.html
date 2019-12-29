@@ -1,5 +1,6 @@
 <html>
     <head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/news.css">
     </head>
@@ -16,38 +17,55 @@
                   <a class="nav-link" href="#"><div class="nav-text-2">Home</div><span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><div class="nav-text-2">News</div></a>
+                  <a class="nav-link" href="news.html"><div class="nav-text-2">News</div></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><div class="nav-text-2">Weather</div></a>
+                  <a class="nav-link" href="weather.html"><div class="nav-text-2">Weather</div></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><div class="nav-text-2">Stocks</div></a>
+                    <a class="nav-link" href="stocks.html"><div class="nav-text-2">Stocks</div></a>
                   </li>
               </ul>
             </div>
           </nav>
 
-          <div class="row" id="body">
+        <div class="row" id="body">
               <div class="col-md-3" id="newsbox">
                   <div class="containertitle">Today's Local News</div>
                   <hr class="line">
-                  Lorem ipsum
+                  <span id="headline"></span>
+                  <span id="story"></span>
 
               </div>
               <div class="col-md-3" id="weatherbox">
                 <div class="containertitle">Today's Local Weather</div>
                 <hr class="line">
-                  Lorem ipsum
+                <ul>
+                  <li><span id="coordinates"></span></li>
+                  <li><span id="name"></span></li>
+                  <li><span id="temp"></span></li>
+                  <li><span id="humidity"></span></li>
+                  </ul>
+                  <img id="icon">
             </div>
             <div class="col-md-3" id="stockbox">
                 <div class="containertitle">Your Stocks</div>
                 <hr class="line">
-                  Lorem ipsum
+                  <div id="amazon"></div><span id="amzndaychange"></span>
+                  <div id="google"></div><span id="googldaychange"></span>
+                  <div id="apple"></div><span id="aapldaychange"></span>
             </div>
+            
+            
           </div>
+        
 
-          <footer id="footer">Copyright info goes here</footer>
+          <footer id="footer">
+            <p>This content is brought to you by the following third-party APIs (that we use but do not own):</p>
+            <p>News API: New York Times (<a href="https://developer.nytimes.com/apis">https://developer.nytimes.com/apis</a>)</p>
+            <p>Weather API: OpenWeather (<a href="https://openweathermap.org/api">https://openweathermap.org/api</a>)</p>
+            <p>Stock API: World Trading Data (<a href="https://www.worldtradingdata.com/">https://www.worldtradingdata.com/</a>)</p>
+          </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="assets/javascript/common.js"></script>
