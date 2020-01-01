@@ -99,8 +99,10 @@ $.ajax({
   $("#humidity").text("Humidity: " + response.main.humidity + "%");
   $("#icon").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
 
-  
 
+  var newsquery = "https://newsapi.org/v2/everything?"+methodSelect+"="+"USA"+"&sortBy="+sortBy+"&apiKey="+APIKey;
+})}
+/*
   var query = response.name;
   console.log(query);
   var queryURLNYT = "https://api.nytimes.com/svc/semantic/v2/geocodes?query.json?latitude=13&longitude=25&api-key=jAuCXwxL8UcAQW1J1XytTNdLZek3b73p";
@@ -116,4 +118,4 @@ $.ajax({
   });
 
 });
-  }
+  } */
