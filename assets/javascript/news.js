@@ -223,7 +223,8 @@ function searchNews(event){
   event.stopPropagation();
   event.preventDefault();
   methodSelect=$(".selectionMethod").val();
-  searchWord=$("#searchWord").val().trim("");
+  searchWord=$("#searchWord").val().replace(" ","");
+  console.log(searchWord);
   formatedDateStart=$("#publicationDateSearchStart").val();
   formatedDateEnd=$("#publicationDateSearchEnd").val();
   sortBy = $(".sortBySelection").val();
@@ -336,7 +337,7 @@ function scrollBackwards(deployNewsScroll){
   }}
 
   function deployArticle(event){
-    alert("clickworks!");
+    // alert("clickworks!");
     event.preventDefault();
     event.stopPropagation();
     var articleValue=$(this).attr("value");
@@ -344,7 +345,7 @@ function scrollBackwards(deployNewsScroll){
     console.log(articleValue);
     $(".mainArticleTitle").html(capturedResponse.articles[articleValue].title);
     $(".authorName").html(capturedResponse.articles[articleValue].author);
-    $(".articleText").html(capturedResponse.articles[articleValue].description+"at");
+    $(".articleText").html(capturedResponse.articles[articleValue].description+" to continue reading, please go to ");
     var outLink= $("<a>");
     outLink.attr("href",capturedResponse.articles[articleValue].url);
     outLink.text(capturedResponse.articles[articleValue].url)
@@ -357,7 +358,7 @@ function scrollBackwards(deployNewsScroll){
     
     $(".mainArticleTitle").html(capturedResponse.articles[0].title);
     $(".authorName").html("author: "+capturedResponse.articles[0].author);
-    $(".articleText").html(capturedResponse.articles[0].description+"at");
+    $(".articleText").html(capturedResponse.articles[0].description+" to continue reading, please go to ");
     var outLink= $("<a>");
     outLink.attr("href",capturedResponse.articles[0].url);
     outLink.text(capturedResponse.articles[0].url)
@@ -390,6 +391,25 @@ $.ajax({
 }).then(function(response){
   console.log("weather");
   console.log(response);
+  if(response.weather[0].main=="Rain"){
+    rain();
+  }
+  if(response.weather[0].main=="Snow"){
+    snow()
+  }
+  if(response.weather[0].main=="Clouds"){
+    cloudy()
+  }
+  if(response.weather[0].main=="Fog"){
+    fog()
+  }
+  
+  if(response.weather[0].main=="Clear"&&response.dt<=response.sys.sunset&&response.dt>=response.sys.sunrise){
+    sunShine()
+  }
+  else if(response.weather[0].main=="Clear"&&response.dt>response.sys.sunset){
+    stars()
+  }
 
 
 
@@ -427,20 +447,159 @@ $(".selectionMethod").on("change",function(event){
 
 $(document).ready(searchNewsInitial);
 
-var snowFlakes =[];
-function snow(){
-  createCanvas(width, height);
-  fill(0);
-  
 
+function snow(){
+  setTimeout(function(){
+  var snowFlake = $("<div>");
+  snowFlake.addClass("snowFlake");
+  $("body").append(snowFlake);
+},1000)
+
+setTimeout(function(){
+  var snowFlake = $("<div>");
+  snowFlake.addClass("snowFlake2");
+  $("body").append(snowFlake);
+  
+},2000)
+setTimeout(function(){
+  var snowFlake = $("<div>");
+  snowFlake.addClass("snowFlake3");
+  $("body").append(snowFlake);
+},3000)
+setTimeout(function(){
+  var snowFlake = $("<div>");
+  snowFlake.addClass("snowFlake4");
+  $("body").append(snowFlake);
+},4000)
+setTimeout(function(){
+  var snowFlake = $("<div>");
+  snowFlake.addClass("snowFlake5");
+  $("body").append(snowFlake);
+},5000)
+setTimeout(function(){
+  var snowFlake = $("<div>");
+  snowFlake.addClass("snowFlake6");
+  $("body").append(snowFlake);
+},6000)
+setTimeout(function(){
+  var snowFlake = $("<div>");
+  snowFlake.addClass("snowFlake7");
+  $("body").append(snowFlake);
+},7000)
 
 }
+function rain(){
+  setTimeout(function(){
+    var rainDrop = $("<div>");
+    rainDrop.addClass("rainDrop");
+    $("body").append(rainDrop);
+  },1500)
+  setTimeout(function(){
+  var rainDrop = $("<div>");
+  rainDrop.addClass("rainDrop2");
+  $("body").append(rainDrop);
+},2000)
+setTimeout(function(){
+var rainDrop = $("<div>");
+rainDrop.addClass("rainDrop3");
+$("body").append(rainDrop);
+},3000)
+setTimeout(function(){
+  var rainDrop = $("<div>");
+  rainDrop.addClass("rainDrop4");
+  $("body").append(rainDrop);
+  },4500)
+setTimeout(function(){
+  var rainDrop = $("<div>");
+  rainDrop.addClass("rainDrop5");
+  $("body").append(rainDrop);
+  },5500)
+setTimeout(function(){
+  var rainDrop = $("<div>");
+  rainDrop.addClass("rainDrop6");
+  $("body").append(rainDrop);
+  },6000)
+setTimeout(function(){
+  var rainDrop = $("<div>");
+  rainDrop.addClass("rainDrop7");
+  $("body").append(rainDrop);
+  },7500)
 
-snow();
+}
+function cloudy(){
+var darkCloud = $("<div>");
+darkCloud.addClass("cloud");
+$("body").append(darkCloud);
+var darkCloud = $("<div>");
+darkCloud.addClass("cloud2");
+$("body").append(darkCloud);
+var darkCloud = $("<div>");
+darkCloud.addClass("cloud3");
+$("body").append(darkCloud);
+}
+
+function sunShine(){
+  var sun= $("<div>");
+  sun.addClass("sun");
+  $("body").append(sun);
+}
+function fog(){
+var fog =$("<div>");
+fog.addClass("fog");
+$("body").append(fog);
+setTimeout(function(){
+  $("body").children().last().remove();
+},5000)}
+
+function stars(){
+  setTimeout(function(){
+  var star= $("<div>");
+  star.addClass("star");
+  $("body").append(star);},1000);
+    setTimeout(function(){
+  var star= $("<div>");
+  star.addClass("star2");
+  $("body").append(star);},1000);
+    setTimeout(function(){
+  var star= $("<div>");
+  star.addClass("star3");
+  $("body").append(star);},1000);
+    setTimeout(function(){
+  var star= $("<div>");
+  star.addClass("star4");
+  $("body").append(star);},1000);
+    setTimeout(function(){
+  var star= $("<div>");
+  star.addClass("star5");
+  $("body").append(star);},2000);
+  setTimeout(function(){
+    var star= $("<div>");
+    star.addClass("star6");
+    $("body").append(star);},2000);
+    setTimeout(function(){
+  var star= $("<div>");
+  star.addClass("star7");
+  $("body").append(star);},2000);
+    setTimeout(function(){
+  var star= $("<div>");
+  star.addClass("star8");
+  $("body").append(star);},2000);
+ 
+    }
 
 
+// function stars(){
 
 
+// }
+
+// }
+
+// function day(){}
+
+// function night(){}
+
+// function fog(){}
 
 
 // https://newsapi.org/v2/everything?q=apple&from=2019-12-20&to=2019-12-20&sortBy=popularity&apiKey=API_KEY
@@ -474,3 +633,11 @@ snow();
 
 
 // 
+
+
+// if(response.dt<=response.sys.sunset&&response.dt>=response.sys.sunrise){
+//   $("#windowRound").attr("style","background-color:skyblue")
+// }
+// else($("#windowRound").attr("style","background-color:black"));
+// saveHistory(response);
+// deployHistory(saveHistory);
