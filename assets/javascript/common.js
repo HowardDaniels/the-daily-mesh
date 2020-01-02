@@ -100,8 +100,18 @@ $.ajax({
   $("#icon").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
 
 
-  var newsquery = "https://newsapi.org/v2/everything?"+methodSelect+"="+"USA"+"&sortBy="+sortBy+"&apiKey="+APIKey;
 })}
+var newsquery =
+"https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com&apiKey=7aebe552e805454298262f34ba67146b";
+
+$.ajax({
+  url: newsquery,
+  method: "GET"
+})
+
+.then(function(response){
+  console.log(response);
+});
 /*
   var query = response.name;
   console.log(query);
