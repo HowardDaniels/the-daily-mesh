@@ -111,6 +111,13 @@ $.ajax({
 
 .then(function(response){
   console.log(response);
+  $("#headline").text(response.articles[0].title);
+  $("#author").text(response.articles[0].author);
+  $("#source").text(response.articles[0].source.name);
+  var date = jQuery.trim(response.articles[0].publishedAt).substring(0, 10).split(" ").slice(0, 5).join(" ")
+  $("#date").text(date);
+  $("#newsimage").attr("src", response.articles[0].urlToImage);
+  $("#story").text(response.articles[0].description);
 });
 /*
   var query = response.name;
