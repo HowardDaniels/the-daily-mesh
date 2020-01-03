@@ -19,9 +19,35 @@
     background-color: #343a40;
     color: white;
     border: 1px bold orange;
-    height: 350px;
+    height: auto;
     margin: 10px;
     margin-top: 100px;
+}
+
+#headline{
+    color: orange;
+    font-weight: bold;
+}
+
+#author{
+    color: gray;
+}
+
+#comma{
+    color: gray;
+}
+
+#source{
+    color: gray;
+}
+
+#date{
+    color: lightgray;
+}
+
+#newsimage{
+    height: 175px;
+    width: 175px;
 }
 
 .containertitle{
