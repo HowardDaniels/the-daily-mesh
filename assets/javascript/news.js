@@ -210,6 +210,7 @@ var newsBox= $(".newsBox");
 var boxValue;
 var capturedResponse;
 
+
 // var articleTitle=$(".articleTitle");
 // var sourceTitle=$(".sourceTitle");
   
@@ -421,22 +422,35 @@ function weatherDisplay(){
 
     
  
+function setTimeLimit(){
+  var monthFromNow= moment().subtract(1,"month").format("YYYY-MM-DD");
+  // alert(monthFromNow);
+  var startDate=document.getElementById("publicationDateSearchStart");
+  var endDate=document.getElementById("publicationDateSearchEnd");
+  startDate.min=monthFromNow;
+  endDate.min=monthFromNow;
+}
 
 
 
 
 
+$(document).ready(setTimeLimit)
 
 
 $(document).ready(weatherDisplay);
 $(document).ready(function(){
   $(".sortBySelection").attr("style","visibility:hidden")
 })
+$(document).ready(function(){
+  $(".sortBySelection").attr("style","width:0px")
+})
 $("#searchForm").on("submit",searchNews);
 $(".selectionMethod").on("change",function(event){
   event.preventDefault();
   event.stopPropagation();
   $(".sortBySelection").attr("style","visibility:visible");
+  $(".sortBySelection").attr("style","width:200px");
 
   if($(".selectionMethod").val()!=="q"){
      disabledOption[0].options[2].disabled=true;
