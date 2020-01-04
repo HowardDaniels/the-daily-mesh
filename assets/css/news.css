@@ -35,7 +35,7 @@ hr{
     background-color: #666666;
     position: absolute;
     bottom: 0px;
-    height: 50px;
+    height: 200px;
     width: 100%;
     text-align: center;
     border-top: 8px solid orange;
@@ -357,7 +357,7 @@ animation-fill-mode: forwards;
     background-color:grey;
     border-radius:50%;
     opacity: 0.3;
-    border:10px solid lightgray;
+    /* border:10px solid lightgray; */
     animation-name:cloud;
     transition-timing-function: linear;
     animation-iteration-count:1;
@@ -368,12 +368,12 @@ animation-fill-mode: forwards;
     position:absolute;
     right:-20%;
     top:45%;
-    height:300px;
+    height:400px;
     width:2000px;
     background-color:grey;
     border-radius:50%;
     opacity: 0.3;
-    border:10px solid lightgray;
+    /* border:10px solid lightgray; */
     animation-name:cloud2;
     animation-iteration-count:1;
     animation-duration:9s;
@@ -385,12 +385,12 @@ animation-fill-mode: forwards;
     position:absolute;
     left:-20%;
     top:70%;
-    height:300px;
+    height:150px;
     width:2000px;
     border-radius:50%;
     background-color:grey;
     opacity: 0.3;
-    border:10px solid lightgray;
+    /* border:10px solid lightgray; */
     animation-name:cloud;
     transition-timing-function: linear;
     animation-iteration-count:1;
@@ -425,12 +425,12 @@ animation-fill-mode: forwards;
         top:90%;}
     61%{visibility:hidden;
         transform:scale(1,1);
-        background-color:white;
+        background-color:#00000000;
         border:1px solid grey;}
      99%{visibility:visible;
         top:80%;
         transform:scale(10,.5);
-        background-color:white;
+        background-color:#00000000;
         border:1px solid grey;
         border-radius:50%;
         top:90%;}

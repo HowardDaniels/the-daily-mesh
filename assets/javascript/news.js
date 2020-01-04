@@ -324,7 +324,7 @@ function scrollBackwards(deployNewsScroll){
 
 
     newsBox[i].setAttribute("value",initialBoxValue);
-    console.log("this shit");
+    // console.log("this shit");
     boxValue=newsBox[i].getAttribute("value");
     $(".newsBoxImage").empty();
     console.log(boxValue);
@@ -392,7 +392,7 @@ $.ajax({
 }).then(function(response){
   console.log("weather");
   console.log(response);
-  if(response.weather[0].main=="Rain"){
+  if(response.weather[0].main=="Rain"||response.weather[0].main=="Mist"){
     rain();
   }
   if(response.weather[0].main=="Snow"){
