@@ -28,9 +28,11 @@ function stockFinder(stock) {
         $(".results").append(priceResults);
         priceResults.html("Current Price:" + price)
 
-        var historyList = $("<ul class='history'>");
+        // var yourHistory = $("<div class='hist'>");
+        // $(".hist").append(yourHistory)
 
-        $(".hist").prepend(name);
+        $(".hist").prepend("<li class='list-item-group active' id="+stock+">"+name+"</li>");
+        
         
 
 
