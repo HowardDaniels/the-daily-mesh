@@ -118,6 +118,7 @@ $.ajax({
   $("#date").text(date);
   $("#newsimage").attr("src", response.articles[0].urlToImage);
   $("#story").text(response.articles[0].description);
+  $("#articlelink").attr("href", response.articles[0].url);
 });
 /*
   var query = response.name;
