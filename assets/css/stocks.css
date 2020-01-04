@@ -95,8 +95,24 @@ hr{
   };
 
   .artimg1{
-    border: solid black .5px;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+    display: block;
+    max-width: 175px;
+    max-height: 175px;
+    width: auto;
+    height: auto;
+}
+
+
+
+  @media screen and (max-width: 600px) {
+    #body {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    #footer{
+        position: sticky;
+    }
   }
