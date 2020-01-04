@@ -59,8 +59,7 @@
 // Western Frisian:fy,Western Frisian
 // ga,Irish
 // gd,Gaelic; Scottish Gaelic
-// gl,Galician
-// gn,Guarani
+// "Galician": "gl";
 // gu,Gujarati
 // gv,Manx
 // ha,Hausa
@@ -193,6 +192,9 @@
 // zh,Chinese
 // zu,Zulu};
 
+
+// //  x = {'key': 1};
+// if ( x.hasOwnProperty('key') ) {
 
 var weatherAPIKey = "166a433c57516f51dfab1f7edaed8413";
 var APIKey= "7aebe552e805454298262f34ba67146b";

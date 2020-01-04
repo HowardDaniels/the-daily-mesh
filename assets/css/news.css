@@ -135,7 +135,12 @@ input{
     font-size:11px;
     color:darkslategray;
     text-align: justify;
+    
 
+}
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
 }
 .selectionMethod{
     height:20px;
@@ -627,7 +632,7 @@ img{
     width:auto;
     margin:auto;
 
-    object-fit: cover;
+    /* object-fit: cover; */
     z-index:-1;
     
 }
@@ -709,6 +714,27 @@ body{
 
 
 }
+
+
+@media screen and (max-width: 600px) {
+    
+    body{
+        overflow:scroll
+    }
+    
+    body::-webkit-scrollbar{
+        display:none;
+    }
+
+    #footer{
+        position:relative
+    }
+        
+
+    }
+  
+
+
 
 
 
