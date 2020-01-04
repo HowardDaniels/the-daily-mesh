@@ -620,8 +620,11 @@ animation-fill-mode: forwards;
 
 } */
 img{
-    width: 95%; 
-    height: 95%; 
+    display:block;
+    max-width: 95%;
+    max-height:95%;
+    height:auto;
+    width:auto;
     margin:auto;
 
     object-fit: cover;
@@ -696,6 +699,9 @@ background-color:orange;
 
 .articleContainer{
     background-color:lightgrey;
+    text-align:center;
+    padding:3px;
+    
 }
 body{
     background-color:lightgrey;
