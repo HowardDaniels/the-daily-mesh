@@ -22,21 +22,22 @@ function stockFinder(stock) {
 
         
         $(".results").html(name);
-        var tBody = $("tbody");
-        var tRow = $("<tr>");
-     
-      var titleTd = $("<td>").text(symbol);
-      var priceTd = $("<td>").text(price);
-      var changeTd = $("<td>").text(dayChange);
-      
-      tRow.append(titleTd, priceTd, changeTd);
-      
-      tBody.append(tRow);
+        
+        var priceResults = $("<h2>");
+        priceResults.addClass("price1");
+        $(".results").append(priceResults);
+        priceResults.html("Current Price:" + price)
+
+        var historyList = $("<ul class='history'>");
+
+        $(".hist").prepend(name);
+        
 
 
         console.log(response);
         console.log(name)
         console.log(dayLow)
+        console.log(price);
   })};
 
   $(".searchBtn").on("click", function(event) {
@@ -62,6 +63,8 @@ function stockFinder(stock) {
      $(".searchBtn").on("click", function(event) {
       $(".stocks").remove();
       event.preventDefault();
+
+      
       
   });
 
@@ -101,7 +104,12 @@ function stockFinder(stock) {
         articleimg3.attr("src", img3);
         articleimg3.addClass("artimg3");
         $(".article3").prepend(articleimg3)
+
         
         
 
       })
+
+      
+
+
