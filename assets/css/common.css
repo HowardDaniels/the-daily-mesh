@@ -46,8 +46,11 @@
 }
 
 #newsimage{
-    height: 175px;
-    width: 175px;
+    display: block;
+    max-width: 175px;
+    max-height: 175px;
+    width: auto;
+    height: auto;
 }
 
 .containertitle{
