@@ -100,8 +100,25 @@ $.ajax({
   $("#icon").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
 
 
-  var newsquery = "https://newsapi.org/v2/everything?"+methodSelect+"="+"USA"+"&sortBy="+sortBy+"&apiKey="+APIKey;
 })}
+var newsquery =
+"https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com&apiKey=7aebe552e805454298262f34ba67146b";
+
+$.ajax({
+  url: newsquery,
+  method: "GET"
+})
+
+.then(function(response){
+  console.log(response);
+  $("#headline").text(response.articles[0].title);
+  $("#author").text(response.articles[0].author);
+  $("#source").text(response.articles[0].source.name);
+  var date = jQuery.trim(response.articles[0].publishedAt).substring(0, 10).split(" ").slice(0, 5).join(" ")
+  $("#date").text(date);
+  $("#newsimage").attr("src", response.articles[0].urlToImage);
+  $("#story").text(response.articles[0].description);
+});
 /*
   var query = response.name;
   console.log(query);
