@@ -28,9 +28,9 @@ function stockFinder(stock) {
       var titleTd = $("<td>").text(symbol);
       var priceTd = $("<td>").text(price);
       var changeTd = $("<td>").text(dayChange);
-      // Append the newly created table data to the table row
+      
       tRow.append(titleTd, priceTd, changeTd);
-      // Append the table row to the table body
+      
       tBody.append(tRow);
 
 
@@ -64,3 +64,44 @@ function stockFinder(stock) {
       event.preventDefault();
       
   });
+
+  var queryURL2 = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=7aebe552e805454298262f34ba67146b";
+      $.ajax({
+        url: queryURL2,
+        method: "GET"
+      }).then(function(response){
+        console.log(response)
+        
+        var title1 = response.articles[0].title;
+        var title2 = response.articles[1].title;
+        var title3 = response.articles[2].title;
+        var url1 = response.articles[0].url;
+        var url2 = response.articles[1].url;
+        var url3 = response.articles[2].url;
+        var img1 = response.articles[0].urlToImage;
+        var img2 = response.articles[1].urlToImage;
+        var img3 = response.articles[3].urlToImage;
+
+        $(".article1").html(title1);
+        $(".article2").html(title2);
+        $(".article3").html(title3);
+
+        var articleimg1 = $("<img>");
+        articleimg1.attr("src", img1);
+        articleimg1.addClass("artimg1");
+        $(".article1").prepend(articleimg1);
+        var link1 = $("<a>")
+
+        var articleimg2 = $("<img>");
+        articleimg2.attr("src", img2);
+        articleimg2.addClass("artimg2");
+        $(".article2").prepend(articleimg2)
+
+        var articleimg3 = $("<img>");
+        articleimg3.attr("src", img3);
+        articleimg3.addClass("artimg3");
+        $(".article3").prepend(articleimg3)
+        
+        
+
+      })

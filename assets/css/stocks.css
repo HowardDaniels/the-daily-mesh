@@ -93,3 +93,10 @@ hr{
     clear: both;
     display: table;
   };
+
+  .artimg1{
+    border: solid black .5px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
