@@ -91,13 +91,14 @@ function stockFinder(stock) {
         $(".article3").html(title3);
 
         
+
+        
         
        var articleimg1 = $("<img>");
         articleimg1.attr("src", img1);
         articleimg1.addClass("artimg1");
         $(".article1").prepend(articleimg1);
         
-        var link1 = $("<a>")
 
         var articleimg2 = $("<img>");
         articleimg2.attr("src", img2);
@@ -108,6 +109,23 @@ function stockFinder(stock) {
         articleimg3.attr("src", img3);
         articleimg3.addClass("artimg3");
         $(".article3").prepend(articleimg3)
+
+        
+        $(".img1").click(function() {
+          window.open(url1)
+        });
+
+        $(".img2").click(function() {
+          window.open(url2)
+        });
+
+        $(".img3").click(function() {
+          window.open(url3)
+        });
+
+
+        
+      
 
   
 
