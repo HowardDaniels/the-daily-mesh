@@ -21,12 +21,21 @@ function stockFinder(stock) {
         var eps = response.data[0].eps;
 
         
-        $(".results").html(name);
+        $(".results").html(name + " - " + symbol);
         
         var priceResults = $("<h2>");
         priceResults.addClass("price1");
         $(".results").append(priceResults);
-        priceResults.html("Current Price:" + price)
+        priceResults.html("Current Price:" + price);
+
+        var highResults = $("<h2>");
+        priceResults.addClass("high");
+        $(".price1").append(priceResults);
+        priceResults.html("Current Price:" + dayHigh);
+
+        console.log(dayHigh)
+
+            
 
         
 

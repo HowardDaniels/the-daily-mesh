@@ -106,13 +106,17 @@ ul{
 
 img{
     width: 190px;
-    height: 90px;
+    height: 80px;
     
 }
 
 .price1{
     padding-top: 5px;
 
+}
+
+.area1{
+    color: red;
 }
 
 
