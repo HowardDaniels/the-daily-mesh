@@ -96,6 +96,7 @@ $.ajax({
   console.log(response);
   $("#name").text(response.name);
   $("#temp").text("Temp: " + Math.round(response.main.temp - 273.15) + " " + "\xB0" + "C/" + Math.round(((response.main.temp - 273.15)* 9/5) + 32) + " " + "\xB0" + "F");
+  $("#wind").text("Wind speed: " + Math.round(response.wind.speed * 1.609) + " kph/" + Math.round(response.wind.speed) + " mph");
   $("#humidity").text("Humidity: " + response.main.humidity + "%");
   $("#icon").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
 
@@ -118,6 +119,7 @@ $.ajax({
   $("#date").text(date);
   $("#newsimage").attr("src", response.articles[0].urlToImage);
   $("#story").text(response.articles[0].description);
+  $("#articlelink").attr("href", response.articles[0].url);
 });
 /*
   var query = response.name;

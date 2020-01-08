@@ -1,0 +1,71 @@
+<html>
+    <head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/weather.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand" href="#"><div class="nav-text-1">The Daily Mesh</div></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html"><div class="nav-text-2">Home</div></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="news.html"><div class="nav-text-2">News</div></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><div class="nav-text-2">Weather</div><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="stocks.html"><div class="nav-text-2">Stocks</div></a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+
+        <div class="row" id="body">
+              <div class="col-md-3" id="searchbox">
+                  <div class="containertitle">Search</div>
+                  <hr class="line">
+              </div>
+
+              <div class="col-md-6" id="weatherbox">
+                <div class="containertitle">Today's Local Weather</div>
+                <hr class="line">
+                <ul>
+                  <li><span id="coordinates"></span></li>
+                  <li><span id="name"></span></li>
+                  <li><span id="temp"></span></li>
+                  <li><span id="wind"></span></li>
+                  <li><span id="humidity"></span></li>
+                </ul>
+                <img id="icon">
+              </div>
+            </div>
+            <div class="row" id="body2">
+            <div class="col-md-9" id="forecast">
+                <div class="containertitle">Forecast</div>
+                <hr class="line">
+            </div>
+            
+            
+          </div>
+        
+
+          <footer id="footer">
+            <p>This content is brought to you by the following third-party APIs (that we use but do not own):</p>
+            <p>News API: News API (<a href="https://newsapi.org/">https://newsapi.org/</a>)</p>
+            <p>Weather API: OpenWeather (<a href="https://openweathermap.org/api">https://openweathermap.org/api</a>)</p>
+            <p>Stock API: World Trading Data (<a href="https://www.worldtradingdata.com/">https://www.worldtradingdata.com/</a>)</p>
+          </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/javascript/weather.js"></script>
+    </body>
+</html>
