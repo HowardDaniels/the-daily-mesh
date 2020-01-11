@@ -33,14 +33,14 @@
               <div class="col-md-3" id="searchbox">
                   <div class="containertitle">Search</div>
                   <hr class="line">
+                  <input id="searchinput"> <button id="searchbutton">Search</button>
               </div>
 
               <div class="col-md-6" id="weatherbox">
                 <div class="containertitle">Today's Local Weather</div>
                 <hr class="line">
+                <div id="chosen-city"></div> <div id="date"></div>
                 <ul>
-                  <li><span id="coordinates"></span></li>
-                  <li><span id="name"></span></li>
                   <li><span id="temp"></span></li>
                   <li><span id="wind"></span></li>
                   <li><span id="humidity"></span></li>
@@ -52,6 +52,44 @@
             <div class="col-md-9" id="forecast">
                 <div class="containertitle">Forecast</div>
                 <hr class="line">
+                <br>
+                <div class="row" id="box-row">
+                    <div class="col-md-2" id="box1">
+                        <div id="date1"></div>
+                        <img id="icon1">
+                        <div id="temp1"></div>
+                        <div id="humidity1"></div>
+
+                    </div>
+                    <div class="col-md-2" id="box2">
+                        <div id="date2"></div>
+                        <img id="icon2">
+                        <div id="temp2"></div>
+                        <div id="humidity2"></div>
+
+                    </div>
+                    <div class="col-md-2" id="box3">
+                        <div id="date3"></div>
+                        <img id="icon3">
+                        <div id="temp3"></div>
+                        <div id="humidity3"></div>
+
+                    </div>
+                    <div class="col-md-2" id="box4">
+                        <div id="date4"></div>
+                        <img id="icon4">
+                        <div id="temp4"></div>
+                        <div id="humidity4"></div>
+
+                    </div>
+                    <div class="col-md-2" id="box5">
+                        <div id="date5"></div>
+                        <img id="icon5">
+                        <div id="temp5"></div>
+                        <div id="humidity5"></div>
+
+                    </div>
+                    </div>
             </div>
             
             
@@ -65,7 +103,9 @@
             <p>Stock API: World Trading Data (<a href="https://www.worldtradingdata.com/">https://www.worldtradingdata.com/</a>)</p>
           </footer>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/javascript/weather.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="assets/javascript/moment.min.js"></script>
+          <script src="assets/javascript/moment-timezone-with-data-10-year-range.min.js"></script>
+          <script src="assets/javascript/weather.js"></script>
     </body>
 </html>
