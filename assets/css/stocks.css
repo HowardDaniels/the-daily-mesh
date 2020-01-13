@@ -105,15 +105,53 @@ ul{
 }
 
 img{
-    width: 190px;
-    height: 80px;
+    width: 180px;
+    height: 70px;
     
 }
 
 .price1{
     padding-top: 5px;
+    font-size: 34px;
+    padding-bottom: 20px;
+    text-align: center;
 
 }
+
+
+
+.key{
+    text-align: left;
+    font-size: 24px;
+}
+
+.high{
+    text-align: left;
+    font-size: 20px;
+}
+
+.center{
+    font-size: 20px;
+    position: fixed;
+    left: 40%;
+}
+
+
+table {
+    width: 100%;
+    margin: 10px;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  th {
+    height: 50px;
+  }
+
+
+
+
+
 
 .area1{
     color: red;
