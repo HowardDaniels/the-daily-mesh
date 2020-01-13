@@ -30,7 +30,7 @@ stocks:
 weather:
     .for header - five-day forecast
     .location {search}
-    .5-day forcast
+    .5-day forecast
     .graph
       
 
