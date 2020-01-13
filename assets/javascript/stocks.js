@@ -23,17 +23,94 @@ function stockFinder(stock) {
         
         $(".results").html(name + " - " + symbol);
         
-        var priceResults = $("<h2>");
+        var priceResults = $("<p>");
         priceResults.addClass("price1");
         $(".results").append(priceResults);
         priceResults.html("Current Price:" + price);
 
-        var highResults = $("<h2>");
-        priceResults.addClass("high");
-        $(".price1").append(priceResults);
-        priceResults.html("Current Price:" + dayHigh);
+        var line = $("<hr>");
+        $(priceResults).append(line);
 
-        console.log(dayHigh)
+        var keyData = $("<p>");
+        line.addClass("key");
+        $(line).append(keyData);
+        keyData.html("Key Data: <br>");
+
+        // var highResults = $("<p>");
+        // highResults.addClass("high");
+        // $(keyData).append(highResults);
+        // highResults.html("Day High: " + dayHigh);
+
+        // var lowResults = $("<p>");
+        // lowResults.addClass("high");
+        // $(highResults).append(lowResults);
+        // lowResults.html("Day Low: " + dayLow);
+
+        // var dayChangeResults = $("<p>");
+        // dayChangeResults.addClass("high");
+        // $(lowResults).append(dayChangeResults);
+        // dayChangeResults.html("Day Change: " + dayChange);
+
+        // var yesterdayResults = $("<p>");
+        // yesterdayResults.addClass("high");
+        // $(dayChangeResults).append(yesterdayResults);
+        // yesterdayResults.html("Yesterday Price: " + yesterday);
+
+        // var marketCapResults = $("<p>");
+        // marketCapResults.addClass("center");
+        // $(".results").append(marketCapResults);
+        // marketCapResults.html("Market Cap: " + marketCap);
+
+        // var volumeResults = $("<p>");
+        // volumeResults.addClass("center");
+        // $(marketCapResults).append(volumeResults);
+        // volumeResults.html("Volume: " + volume);
+
+        // var peResults = $("<p>");
+        // peResults.addClass("center");
+        // $(volumeResults).append(peResults);
+        // peResults.html("P/E Ratio: " + pe);
+
+        // var epsResults = $("<p>");
+        // epsResults.addClass("center");
+        // $(peResults).append(epsResults);
+        // epsResults.html("Earnings Per Share (EPS): " + eps);
+
+  
+        console.log(dayHigh);
+
+
+        // create table
+var $table = $('<table>');
+
+//tbody
+var $tbody = $table.append('<tbody />').children('tbody');
+
+// add row
+$tbody.append('<tr />').children('tr:last')
+.append("<td>" +"<strong>" + "Day High: " + "</strong>" + dayHigh + "</td>")
+.append("<td>" + "<strong>" + "Market Cap: " + "</strong>" + marketCap + "</td>")
+
+
+
+// add another row
+$tbody.append('<tr />').children('tr:last')
+.append("<td>" + "<strong>" + "Day Low: " + "</strong>" + dayLow + "</td>")
+.append("<td>" + "<strong>" + "Volume: " + "</strong>" + volume + "</td>")
+
+
+
+$tbody.append('<tr />').children('tr:last')
+.append("<td>" + "<strong>" + "Day Change: " + "</strong>" + dayChange + "</td>")
+.append("<td>" + "<strong>" + "P/E: " + "</strong>" + pe + "</td>")
+
+
+$tbody.append('<tr />').children('tr:last')
+.append("<td>" + "<strong>" + "Yesterday Price: " + "</strong>" + yesterday + "</td>")
+.append("<td>" + "<strong>" + "Earnings Per Share (EPS): " + "</strong>" + eps + "</td>");
+
+
+$table.appendTo(keyData);
 
             
 
