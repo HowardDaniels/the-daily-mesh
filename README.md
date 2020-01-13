@@ -2,11 +2,11 @@
 
 
 user stories{
-1. there need to be four web pages, one for the front page, 
+1. there need to be four web pages: one for the front page, 
 one for the daily headlines, one for stocks, and one for the weather.
 2. search functions apply to each of the pages
 
-front page (headlines for everything - most important news)):
+front page (headlines for everything - most important news):
 .go to news
 .go to weather
 .go to stocks
